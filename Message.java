@@ -10,5 +10,22 @@ package socialnetwork;
  * @author lenovo
  */
 public class Message {
+        
+User sender; 
+User receiver;
+String text; 
+User []members; 
+Message[] messages; 
+
+ void sendMessage(User receiver,String msg){
+     
+ } 
+void receive(User sender,String msg){
+    
+}
+ void saveMessage(Message message){
+     
+ }
+
     
 }
