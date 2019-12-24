@@ -10,5 +10,11 @@ package socialnetwork;
  * @author lenovo
  */
 public class ControllerAll {
+      ArrayList<User> userLisl=new ArrayList<>();
     
+    ArrayList<Group> groupLisl=new ArrayList<>();
+    
+    ArrayList<Post> postLisl=new ArrayList<>();
+    
+    ArrayList<Page> pageLisl=new ArrayList<>();
 }
