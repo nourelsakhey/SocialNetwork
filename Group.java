@@ -54,6 +54,7 @@ boolean accept(User person){
 } 
 
 void addPost(Post p){
+System.out.println("KK");
      
  }
 //github
