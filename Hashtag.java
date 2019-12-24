@@ -10,5 +10,10 @@ package socialnetwork;
  * @author lenovo
  */
 public class Hashtag {
+    String name;
+    Hashtag [] H;
+    boolean checkName(String name){
+        return true;
+    }
     
 }
