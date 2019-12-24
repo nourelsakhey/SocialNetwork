@@ -11,4 +11,11 @@ package socialnetwork;
  */
 public class Controller {
     
+User owner;
+  void create_account(String name,String gender,String mail,String pass){
+      
+  }
+  void deactivate_account(User profile ,String reason){
+      
+  }
 }
