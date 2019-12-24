@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package socialnetwork;
+import java.util.ArrayList;
 
 /**
  *
