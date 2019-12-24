@@ -42,7 +42,7 @@ void change_privacy(String privacy){
     
 }
 Hashtag setHash(Post p,boolean isHah){
-    return Hashtag;
+    return new Hashtag();
 }
 
 
