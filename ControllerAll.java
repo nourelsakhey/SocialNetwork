@@ -23,7 +23,6 @@ public class ControllerAll {
     
    static ArrayList<Post> postList=new ArrayList<>();
     
-    ArrayList<Group> groupLisl=new ArrayList<>();
    static ArrayList<Page> pageList=new ArrayList<>();
      public static void main(String[] args) {
          
