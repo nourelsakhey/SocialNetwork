@@ -11,15 +11,12 @@ import socialnetwork.User;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package socialnetwork;
-import java.util.ArrayList;
 
 /**
  *
  * @author lenovo
  */
 public class ControllerAll {
-      ArrayList<User> userLisl=new ArrayList<>();
    static ArrayList<User> userList=new ArrayList<>();
     
    static ArrayList<Group> groupList=new ArrayList<>();
@@ -48,7 +45,5 @@ public class ControllerAll {
          }
     }
     
-    ArrayList<Post> postLisl=new ArrayList<>();
     
-    ArrayList<Page> pageLisl=new ArrayList<>();
 }
