@@ -25,13 +25,14 @@ public class User {
     String workPlace;
     String college;
     ArrayList<User> FriendList = new ArrayList<User>();
+    ArrayList<String> request = new ArrayList<String>();
     ArrayList<Page> FollowPages = new ArrayList<Page>();
     ArrayList<Post> Posts = new ArrayList<Post>();
     ArrayList<Page> CreatedPages = new ArrayList<Page>();
     ArrayList<Message> Messages = new ArrayList<Message>();
     ArrayList<Group> CreatedGroups = new ArrayList<Group>();
     ArrayList<Group> FollowGroups = new ArrayList<Group>();
-    Controller controller=new Controller();
+    Controller controller = new Controller();
     boolean PermiumUser = false;
 
     void login(String mail, String pass) {
@@ -67,8 +68,14 @@ public class User {
         if (u == null) {
             System.out.println("there is no friend with this name");
         } else {
-            FriendList.add(u);
-            System.out.println("successful addFriend");
+            //FriendList.add(u);
+            for (int i = 0; i < userList.size(); i++) {
+                if (name.equals(userList.get(i).Name)) {
+                    userList.get(i).request.add(this.Name);
+                    System.out.println("successfully send a friend request");
+                }
+              //  System.out.println("successful addFriend");
+            }
         }
     }
 
@@ -76,13 +83,22 @@ public class User {
 
     }
 
-    void accept_friend(String fname) {
-        System.out.println(fname + " sent you a friend request\n1-accept\n2-reject");
-        Scanner s = new Scanner(System.in);
-        String str = s.nextLine();
-        if ("1".equals(str)) {
-            User u = search_friend(fname);
-            FriendList.add(u);
+    void accept_friend() {
+        for (int i = 0; i < request.size(); i++) {
+            System.out.println(request.get(i) + " sent you a friend request\n1-accept\n2-reject");
+            Scanner s = new Scanner(System.in);
+            String str = s.nextLine();
+            if ("1".equals(str)) {
+                User u = search_friend(request.get(i));
+                FriendList.add(u);
+                for (int j = 0; j < userList.size(); j++) {
+                    if (request.get(i).equals(userList.get(j).Name)) {
+                        userList.get(j).FriendList.add(this);
+                        System.out.println("you added "+request.get(i)+" successfully");
+                    }
+                }
+                request.remove(i);
+            }
         }
     }
 
@@ -97,7 +113,7 @@ public class User {
                 this.PermiumUser = false;
             } else {
                 this.PermiumUser = true;
-                 System.out.println(" you are a premuim user");
+                System.out.println(" you are a premuim user");
             }
         } else {
             this.PermiumUser = false;
