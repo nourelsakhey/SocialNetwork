@@ -29,6 +29,46 @@ public class ControllerAll {
    static ArrayList<Post> postList=new ArrayList<>();
     
    static ArrayList<Page> pageList=new ArrayList<>();
+
+   
+void checkReason(String reason){
+    
+}
+void checkUserName(String name){
+    
+}
+void checkUserpassword(String pass){
+    
+}
+void verifyEmail(String mail){
+    
+}
+boolean checkSignIn(){
+    return false;
+}
+boolean checkUserPost(){
+    return false;
+}
+boolean checkPostIsEmpty(){
+    return false;
+}
+boolean checkAvailability(){
+    return false;
+}
+boolean checkName(String name){
+    return false;
+}
+boolean chechPrivacy(){
+    return false;
+}
+boolean checkFrindlist(String frind){
+    return false;
+}
+boolean checkMessage(String message){
+    return false;
+}
+
+
      public static void main(String[] args) {
          
          User u=new User ();
