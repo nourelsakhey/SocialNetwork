@@ -21,6 +21,9 @@ Group group;
 Page page;
 Controller account; 
 
+Post createPost(User owner ,String text ){
+    return new Post();
+} 
 
 int likes_no(){
     return 0;
