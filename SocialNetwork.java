@@ -18,4 +18,5 @@ public class SocialNetwork {
         // TODO code application logic here
     }
     
+    
 }
