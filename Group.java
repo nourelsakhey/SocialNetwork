@@ -62,6 +62,10 @@ void addPost(Post p){
 System.out.println("KK");
      
  }
-//github
+
+void addUser(User u){
+    
+}
+
 
 }
