@@ -58,4 +58,5 @@ public class ControllerAll {
                 u.accept_friend(acceptname);
          }
     }
+    
 }
