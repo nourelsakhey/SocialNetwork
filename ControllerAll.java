@@ -12,9 +12,12 @@ import socialnetwork.User;
  * and open the template in the editor.
  */
 
+<<<<<<< HEAD
 //package SocialNetwork;
 import java.util.ArrayList;
 import java.util.Scanner;
+=======
+>>>>>>> 88c0fc8cb9546df9dae67ce9e7067c6618739504
 
 /**
  *
@@ -29,12 +32,57 @@ public class ControllerAll {
    static ArrayList<Post> postList=new ArrayList<>();
     
    static ArrayList<Page> pageList=new ArrayList<>();
+
+   
+void checkReason(String reason){
+    
+}
+void checkUserName(String name){
+    
+}
+void checkUserpassword(String pass){
+    
+}
+void verifyEmail(String mail){
+    
+}
+boolean checkSignIn(){
+    return false;
+}
+boolean checkUserPost(){
+    return false;
+}
+boolean checkPostIsEmpty(){
+    return false;
+}
+boolean checkAvailability(){
+    return false;
+}
+boolean checkName(String name){
+    return false;
+}
+boolean chechPrivacy(){
+    return false;
+}
+boolean checkFrindlist(String frind){
+    return false;
+}
+boolean checkMessage(String message){
+    return false;
+}
+
+
      public static void main(String[] args) {
          
          User u=new User ();
          System.out.println("Enter 1 to create account  ");
          System.out.println("Enter 2 to login ");
+<<<<<<< HEAD
          System.out.println("Enter -1 to exit ");
+=======
+         System.out.println("Enter 3 to add Friend ");
+         System.out.println("Enter 4 to accept friend");
+>>>>>>> 88c0fc8cb9546df9dae67ce9e7067c6618739504
          Scanner sc=new Scanner(System.in);
          int c=sc.nextInt();
          while(c!=-1){
