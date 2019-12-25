@@ -69,8 +69,9 @@ public class ControllerAll {
                 if(check){
                     while(true){
                   System.out.println("Enter 1 to send a friend request");
-                  System.out.println("Enter 2 to be a premuim user");
-                  System.out.println("Enter 3 to exit");
+                System.out.println("Enter 2 to be a premuim user");
+                 System.out.println("Enter 3 to accept friend requests");
+                  System.out.println("Enter 4 to exit");
                   String choice=sc.nextLine();
                   if("1".equals(choice)){
                       System.out.println("enter the name of the user ");
@@ -80,8 +81,17 @@ public class ControllerAll {
                   else if("2".equals(choice)){
                       u.premium_user();
                   }
-                  else if("3".equals(choice)){
+                    else if("3".equals(choice)){
+                        u.accept_friend();
+                  }
+                  else if("4".equals(choice)){
                       break;
+                  }
+                  for(int i=0;i<userList.size();i++){
+                      if(u.Name.equals(userList.get(i).Name)){
+                          userList.remove(i);
+                          userList.add(u);
+                      }
                   }
                   
                   
