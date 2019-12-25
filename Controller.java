@@ -14,6 +14,13 @@ public class Controller {
 User owner;
   void create_account(String name,String gender,String mail,String pass){
       
+  User owner;
+  User create_account(String name,String gender,String mail,String pass){
+      owner.Name=name;
+      owner.Gender=gender;
+      owner.Email=mail;
+      owner.Password=pass;
+      return owner;
   }
   void deactivate_account(User profile ,String reason){
       
