@@ -12,15 +12,12 @@ import java.util.Scanner;
  * @author lenovo
  */
 public class ControllerAll {
-      ArrayList<User> userLisl=new ArrayList<>();
       ArrayList<User> userList=new ArrayList<>();
     
     ArrayList<Group> groupList=new ArrayList<>();
     
-    ArrayList<Post> postLisl=new ArrayList<>();
     ArrayList<Post> postList=new ArrayList<>();
     
-    ArrayList<Page> pageLisl=new ArrayList<>();
     ArrayList<Page> pageList=new ArrayList<>();
     public static void main(String[] args) {
         // TODO code application logic here
