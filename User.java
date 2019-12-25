@@ -8,6 +8,7 @@ package socialnetwork;
 import java.awt.Image;
 import java.util.ArrayList;
 import java.util.Scanner;
+import static socialnetwork.ControllerAll.userList;
 
 /**
  *
@@ -30,65 +31,89 @@ public class User {
     ArrayList<Message> Messages = new ArrayList<Message>();
     ArrayList<Group> CreatedGroups = new ArrayList<Group>();
     ArrayList<Group> FollowGroups = new ArrayList<Group>();
-    Controller controller;
-void login(String mail,String pass){
-    
-}
+    Controller controller=new Controller();
+    boolean PermiumUser = false;
 
-void logout(){
-    
-}
-void add_info(String school,String college,String work_space){
-    
-}
-void change_pp(Image profilepicture){
-    
-}
-User search_friend(String fname){
-    ControllerAll ca=new ControllerAll();
-    for(int i=0; i<ca.userList.size();i++){
-        if(ca.userList.get(i).equals(fname)){
-            return ca.userList.get(i);
+    void login(String mail, String pass) {
+
+    }
+
+    void logout() {
+
+    }
+
+    void add_info(String school, String college, String work_space) {
+
+    }
+
+    void change_pp(Image profilepicture) {
+
+    }
+
+    User search_friend(String fname) {
+
+        for (int i = 0; i < userList.size(); i++) {
+            if (fname.equals(userList.get(i).Name)) {
+                return userList.get(i);
+            }
+
+        }
+        return null;
+    }
+
+    void add_friend(String name) {
+        User u = new User();
+        u = search_friend(name);
+        if (u == null) {
+            System.out.println("there is no friend with this name");
+        } else {
+            FriendList.add(u);
+            System.out.println("successful addFriend");
         }
     }
-    return null;
-}
-void add_friend(String name){
-    Scanner s=new Scanner(System.in);
-    System.out.println("Do you want to be a premium User?");
-    String in=s.nextLine();
-    if(in.equals("yes")){
-        System.out.println("pay 99$ ...by credit card or payPal?");
-    }
-    String pay=s.nextLine();
-    search_friend(name);
-    System.out.println("successful addFriend");
-}
-void remove_friend(String name){
-    
-}
-void accept_friend(String fname){
-    User u=search_friend(fname);
-    Scanner s=new Scanner(System.in);
-    System.out.println("Do you want to be a premium User?");
-    String in=s.nextLine();
-    if(in.equals("yes")){
-        System.out.println("pay 99$ ...by credit card or payPal?");
-    }
-    String pay=s.nextLine();
-    FriendList.add(u);
-    
-}
 
- User[] view_friends(){
-    return null;
-}
-boolean checkAvailability(){
-    return false;
-}
-void cancelAdd(){
-    
-}
+    void remove_friend(String name) {
 
+    }
+
+    void accept_friend(String fname) {
+        System.out.println(fname + " sent you a friend request\n1-accept\n2-reject");
+        Scanner s = new Scanner(System.in);
+        String str = s.nextLine();
+        if ("1".equals(str)) {
+            User u = search_friend(fname);
+            FriendList.add(u);
+        }
+    }
+
+    void premium_user() {
+        System.out.println("Do you want to be a premuim user");
+        Scanner s = new Scanner(System.in);
+        String str = s.nextLine();
+        if ("yes".equals(str)) {
+            System.out.println(" pay 99$ for a year\n1-by credit card\n2-byPayPal\n3-exit");
+            str = s.nextLine();
+            if ("3".equals(str)) {
+                this.PermiumUser = false;
+            } else {
+                this.PermiumUser = true;
+                 System.out.println(" you are a premuim user");
+            }
+        } else {
+            this.PermiumUser = false;
+        }
+    }
+
+    User[] view_friends() {
+        return null;
+    }
+
+    boolean checkAvailability() {
+        return false;
+    }
+
+    void cancelAdd() {
+
+    }
 
 }
