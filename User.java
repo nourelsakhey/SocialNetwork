@@ -7,6 +7,7 @@ package socialnetwork;
 
 import java.awt.Image;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 /**
  *
@@ -43,10 +44,40 @@ void add_info(String school,String college,String work_space){
 void change_pp(Image profilepicture){
     
 }
+User search_friend(String fname){
+    ControllerAll ca=new ControllerAll();
+    for(int i=0; i<ca.userList.size();i++){
+        if(ca.userList.get(i).equals(fname)){
+            return ca.userList.get(i);
+        }
+    }
+    return null;
+}
 void add_friend(String name){
     
+    Scanner s=new Scanner(System.in);
+    System.out.println("Do you want to be a premium User?");
+    String in=s.nextLine();
+    if(in.equals("yes")){
+        System.out.println("pay 99$ ...by credit card or payPal?");
+    }
+    String pay=s.nextLine();
+    search_friend(name);
+    System.out.println("successful addFriend");
 }
 void remove_friend(String name){
+    
+}
+void accept_friend(String fname){
+    User u=search_friend(fname);
+    Scanner s=new Scanner(System.in);
+    System.out.println("Do you want to be a premium User?");
+    String in=s.nextLine();
+    if(in.equals("yes")){
+        System.out.println("pay 99$ ...by credit card or payPal?");
+    }
+    String pay=s.nextLine();
+    FriendList.add(u);
     
 }
 
