@@ -54,7 +54,6 @@ User search_friend(String fname){
     return null;
 }
 void add_friend(String name){
-    
     Scanner s=new Scanner(System.in);
     System.out.println("Do you want to be a premium User?");
     String in=s.nextLine();
