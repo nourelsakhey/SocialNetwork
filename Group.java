@@ -13,7 +13,7 @@ public class Group {
     
 String name;
 User owner;
-User [] joined;
+String [] joined;
 Post [] posts; 
 boolean isprivate;
 
@@ -22,12 +22,17 @@ boolean isprivate;
 ControllerAll groupController;
 
 
-void Group(boolean type){
+
+Group(){
     
 }
 
-void create(User admin){
+Group(boolean type){
     
+}
+
+Group createGroup(String name){
+    return new Group();
 }
 
 void joinGroup(String joined){
@@ -41,8 +46,8 @@ void remove(User person){
 void change_privacy (String privacy){
     
 }
-void delete(User admin){
-
+void delete(){
+//owner.CreatedGroups.remove(this);
 }
 
 boolean checkPrivacy(){
@@ -56,5 +61,9 @@ boolean accept(User person){
 void addPost(Post p){
      
  }
+
+void addUser(User u){
+    
+}
 
 }
