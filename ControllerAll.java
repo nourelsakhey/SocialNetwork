@@ -12,9 +12,6 @@ import socialnetwork.User;
  * and open the template in the editor.
  */
 
-package socialnetwork;
-import java.util.ArrayList;
-import java.util.Scanner;
 
 /**
  *
@@ -74,6 +71,8 @@ boolean checkMessage(String message){
          User u=new User ();
          System.out.println("Enter 1 to create account  ");
          System.out.println("Enter 2 to login ");
+         System.out.println("Enter 3 to add Friend ");
+         System.out.println("Enter 4 to accept friend");
          Scanner sc=new Scanner(System.in);
          int c=sc.nextInt();
          
