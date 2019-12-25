@@ -10,5 +10,20 @@ package socialnetwork;
  * @author lenovo
  */
 public class Page {
+    String name;
+    User [] likers;
+    Post [] posts;
     
+    void create(User admin, String name){
+        
+    }
+    void follow(User person){
+        
+    }
+    void delete(String admin){
+        
+    }
+    void addPost(Post p){
+        
+    }
 }
