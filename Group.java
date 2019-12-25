@@ -22,7 +22,12 @@ boolean isprivate;
 ControllerAll groupController;
 
 
-void Group(boolean type){
+
+Group(){
+    
+}
+
+Group(boolean type){
     
 }
 
