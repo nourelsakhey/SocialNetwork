@@ -89,9 +89,7 @@ boolean checkAvailability(){
 void cancelAdd(){
     
 }
-void selectUser(){
-}
-void addPost(Post p){
     
-}
+
+
 }
