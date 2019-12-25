@@ -26,7 +26,7 @@ void Group(boolean type){
     
 }
 
-void create(User admin){
+void createGroup(String name){
     
 }
 
