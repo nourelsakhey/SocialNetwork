@@ -66,4 +66,8 @@ void addUser(User u){
     
 }
 
+Group searchGroup(String Gname){
+    return new Group();
+}
+
 }
