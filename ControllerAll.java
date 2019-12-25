@@ -12,7 +12,7 @@ import socialnetwork.User;
  * and open the template in the editor.
  */
 
-package socialnetwork;
+//package SocialNetwork;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -34,28 +34,67 @@ public class ControllerAll {
          User u=new User ();
          System.out.println("Enter 1 to create account  ");
          System.out.println("Enter 2 to login ");
+         System.out.println("Enter -1 to exit ");
          Scanner sc=new Scanner(System.in);
          int c=sc.nextInt();
-         
-         switch (c) {
-             
-             case 1:
-                 System.out.println("Enter name , gender ,mail , password");
+         while(c!=-1){
+         if(c==1){
+                 sc.nextLine();
+                 System.out.println("Enter name");
                  String name=sc.nextLine();
+                 System.out.println("Enter gender ");
                  String gender=sc.nextLine();
+                 System.out.println("Enter mail");
                  String mail=sc.nextLine();
+                 System.out.println("Enter password");
                  String pass=sc.nextLine();
+                 //User u1=new User();
                userList.add(u.controller.create_account(name, gender, mail, pass));
+         }
+         else if(c==2){
 
-            case 2:
-                System.out.println("Enter name");
-                String addname=sc.nextLine();
-                u.add_friend(addname);
-                
-            case 3:
-                System.out.println("Enter name");
-                String acceptname=sc.nextLine();
-                u.accept_friend(acceptname);
+                boolean check=false;
+                sc.nextLine();
+                System.out.println("Enter your mail");
+                String email=sc.nextLine();
+                System.out.println("Enter your password");
+                String password=sc.nextLine();
+                for(int i=0;i<userList.size();i++){
+                    if(email.equals(userList.get(i).Email)&&password.equals(userList.get(i).Password)){
+                        System.out.println("you are logged in successfully");
+                        u=userList.get(i);
+                        check=true;   
+                    }
+                }
+                if(check){
+                    while(true){
+                  System.out.println("Enter 1 to send a friend request");
+                  System.out.println("Enter 2 to be a premuim user");
+                  System.out.println("Enter 3 to exit");
+                  String choice=sc.nextLine();
+                  if("1".equals(choice)){
+                      System.out.println("enter the name of the user ");
+                      String fname=sc.nextLine();
+                      u.add_friend(fname);
+                  }
+                  else if("2".equals(choice)){
+                      u.premium_user();
+                  }
+                  else if("3".equals(choice)){
+                      break;
+                  }
+                  
+                  
+                    }
+                }
+                else{
+                    System.out.println("invalid mail or password");
+                }
+         }
+         System.out.println("Enter 1 to create account  ");
+         System.out.println("Enter 2 to login ");
+         System.out.println("Enter -1 to exit ");
+         c=sc.nextInt();
          }
     }
     
