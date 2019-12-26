@@ -9,6 +9,7 @@ package socialnetwork;
  *
  * @author lenovo
  */
+// software 1
 public class Page {
     String name;
     User [] likers;
