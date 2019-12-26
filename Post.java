@@ -8,10 +8,10 @@ package socialnetwork;
 /**
  *
  * @author lenovo
- */
+ *//
+     
 public class Post {
-    
-User owner;
+User owner;    
 String content;
 String privacy;
 int likes_no;
