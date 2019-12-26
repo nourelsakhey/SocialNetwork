@@ -9,6 +9,8 @@ package socialnetwork;
  *
  * @author lenovo
  */
+//software 1
+
 public class Group {
     
 String name;
