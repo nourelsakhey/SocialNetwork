@@ -6,7 +6,8 @@
 package socialnetwork;
 
 /**
- *
+ * software 1
+ 
  * @author lenovo
  */
 public class Hashtag {
