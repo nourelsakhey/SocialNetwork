@@ -30,8 +30,8 @@ public class ControllerAll {
     
    static ArrayList<Page> pageList=new ArrayList<>();
      public static void main(String[] args) {
-         
-         User u=new User ();
+         Controller cn=new Controller();
+        // User u=new User ();
          System.out.println("Enter 1 to create account  ");
          System.out.println("Enter 2 to login ");
          System.out.println("Enter -1 to exit ");
@@ -49,7 +49,7 @@ public class ControllerAll {
                  System.out.println("Enter password");
                  String pass=sc.nextLine();
                  //User u1=new User();
-               userList.add(u.controller.create_account(name, gender, mail, pass));
+               userList.add(cn.create_account(name, gender, mail, pass));
          }
          else if(c==2){
 
@@ -62,7 +62,7 @@ public class ControllerAll {
                 for(int i=0;i<userList.size();i++){
                     if(email.equals(userList.get(i).Email)&&password.equals(userList.get(i).Password)){
                         System.out.println("you are logged in successfully");
-                        u=userList.get(i);
+                        cn.owner=userList.get(i);
                         check=true;   
                     }
                 }
@@ -76,21 +76,21 @@ public class ControllerAll {
                   if("1".equals(choice)){
                       System.out.println("enter the name of the user ");
                       String fname=sc.nextLine();
-                      u.add_friend(fname);
+                      cn.owner.add_friend(fname);
                   }
                   else if("2".equals(choice)){
-                      u.premium_user();
+                      cn.owner.premium_user();
                   }
                     else if("3".equals(choice)){
-                        u.accept_friend();
+                        cn.owner.accept_friend();
                   }
                   else if("4".equals(choice)){
                       break;
                   }
                   for(int i=0;i<userList.size();i++){
-                      if(u.Name.equals(userList.get(i).Name)){
+                      if(cn.owner.Name.equals(userList.get(i).Name)){
                           userList.remove(i);
-                          userList.add(u);
+                          userList.add(cn.owner);
                       }
                   }
                   
