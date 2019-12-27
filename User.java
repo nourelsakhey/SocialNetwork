@@ -32,7 +32,7 @@ public class User {
     ArrayList<Message> Messages = new ArrayList<Message>();
     ArrayList<Group> CreatedGroups = new ArrayList<Group>();
     ArrayList<Group> FollowGroups = new ArrayList<Group>();
-    Controller controller = new Controller();
+   // Controller controller = new Controller();
     boolean PermiumUser = false;
 
     void login(String mail, String pass) {
