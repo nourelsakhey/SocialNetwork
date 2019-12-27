@@ -8,7 +8,7 @@ package socialnetwork;
 /**
  *
  * @author lenovo
- *//
+ */
      
 public class Post {
 User owner;    
