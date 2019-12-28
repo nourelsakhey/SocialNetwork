@@ -11,8 +11,9 @@ package socialnetwork;
  */
 public class Controller {
     
-  User owner=new User();
+  User owner;
   User create_account(String name,String gender,String mail,String pass){
+      owner=new User();
       owner.Name=name;
       owner.Gender=gender;
       owner.Email=mail;
